@@ -39,6 +39,7 @@ pipeline {
 
               cat > job.sh <<'EOF'
 #!/bin/bash
+#SBATCH --partition=norm
 #SBATCH --job-name=test_commit
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
@@ -47,6 +48,7 @@ pipeline {
 #SBATCH --mem=1G
 
 set -euo pipefail
+mkdir -p ${env.HPC_DIR}/
 touch ${env.HPC_DIR}/test.${shortCommit}.txt
 EOF
 
