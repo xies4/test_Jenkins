@@ -1,9 +1,13 @@
 pipeline {
   agent any
+
   stages {
     stage('TEST') {
       steps {
-        sh 'echo hello'
+        echo 'Jenkinsfile is running'
+        sh 'pwd'
+        sh 'git rev-parse --short HEAD'
+        sh 'ls -la'
       }
     }
   }
