@@ -1,10 +1,9 @@
 pipeline {
   agent any
-
   stages {
-    stage('HELLO') {
+    stage('TEST') {
       steps {
-        echo "HELLO FROM JENKINSFILE"
+        sh 'echo hello'
       }
     }
   }
