@@ -7,7 +7,7 @@ pipeline {
     stage('TEST') {
       steps {
         checkout scm
-        echo 'Jenkinsfile is running'
+        echo 'Jenkinsfile is running on April 24, 2026'
         sh 'pwd'
         sh 'git rev-parse --short HEAD'
         sh 'ls -la'
