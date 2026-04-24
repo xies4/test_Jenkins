@@ -4,6 +4,7 @@ pipeline {
   stages {
     stage('TEST') {
       steps {
+        checkout scm
         echo 'Jenkinsfile is running'
         sh 'pwd'
         sh 'git rev-parse --short HEAD'
@@ -12,5 +13,4 @@ pipeline {
     }
   }
 }
-
 
