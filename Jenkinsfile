@@ -1,6 +1,6 @@
 pipeline {
-  agent { label 'Jenkins-Build-Node-01' }
-  
+  // agent { label 'Jenkins-Build-Node-01' }
+  agent any
   stages {
     stage('TEST') {
       steps {
