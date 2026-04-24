@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent Jenkins-Build-Node-01
   
   stages {
     stage('TEST') {
